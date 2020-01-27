@@ -1,6 +1,7 @@
 { "name": "wix-users-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 17,
       "filename": "users.js" },
@@ -30,7 +31,7 @@
         "set": false,
         "type": "wix-users.User",
         "locations":
-          [ { "lineno": 356,
+          [ { "lineno": 349,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Gets the current user viewing the site.",
@@ -82,7 +83,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - A session token for logging in the approved user in client-side code.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 208,
+          [ { "lineno": 205,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Approve a member whose status is `\"Pending\"` using an email address.",
@@ -133,7 +134,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - A session token for logging in the approved user in client-side code.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 158,
+          [ { "lineno": 156,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Approve a member whose status is `\"Pending\"` using an approval token.",
@@ -332,7 +333,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When specified member is blocked.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 238,
+          [ { "lineno": 234,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Blocks a member from logging into the site.",
@@ -373,7 +374,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the user is deleted.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 487,
+          [ { "lineno": 478,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Deletes an existing user.",
@@ -422,7 +423,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the email is sent.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 294,
+          [ { "lineno": 288,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Sends a Triggered Email to the specified site member.",
@@ -602,7 +603,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - A session token for logging in the approved user in client-side code.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 259,
+          [ { "lineno": 254,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Create a session token for a member authenticated by a 3rd party.",
@@ -688,7 +689,7 @@
                   [ "wix-users-backend.UserInfo" ] },
             "doc": "Fulfilled - The given user's information.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 469,
+          [ { "lineno": 461,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Gets an existing user by ID.",
@@ -762,7 +763,7 @@
                   [ "string" ] },
             "doc": "Fulfilled - Session token for logging the user in.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 133,
+          [ { "lineno": 132,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Logs a user in based on email and password.",
@@ -995,7 +996,8 @@
           { "notes":
               [ "When member registration is set to auto approve, calling the [client-side\n `register()` function](wix-users.html#register) is equally as secure as\n calling it from backend code. However, when member approval is set to\n manual, calling the backend version of the `register()` function allows you\n to construct more secure approval flows." ] } },
       { "name": "updateUserFields",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "userId",
@@ -1011,7 +1013,7 @@
                   [ "void" ] },
             "doc": "Fulfilled - When the user is updated.\nRejected - Error message." },
         "locations":
-          [ { "lineno": 504,
+          [ { "lineno": 494,
               "filename": "users.js" } ],
         "docs":
           { "summary": "Updates an existing user by ID.",
@@ -1028,7 +1030,7 @@
                     [ "import wixUsers from 'wix-users-backend';",
                       "",
                       "export function updateUserFields(userId, firstName, lastName, email, phone) {",
-                      "  wixCrm.updateUserFields(userId, {",
+                      "  wixUsers.updateUserFields(userId, {",
                       "      \"firstName\": firstName,",
                       "      \"lastName\": lastName,",
                       "      \"emails\": [email],",
@@ -1051,7 +1053,7 @@
   "messages":
     [ { "name": "Address",
         "locations":
-          [ { "lineno": 428,
+          [ { "lineno": 420,
               "filename": "users.js" } ],
         "docs":
           { "summary": "An object that contains information about a site member's address.",
@@ -1121,7 +1123,7 @@
         "labels": [] },
       { "name": "Picture",
         "locations":
-          [ { "lineno": 421,
+          [ { "lineno": 413,
               "filename": "users.js" } ],
         "docs":
           { "summary": "An object that contains information about a site member's picture.",
@@ -1210,7 +1212,7 @@
         "labels": [] },
       { "name": "UserInfo",
         "locations":
-          [ { "lineno": 438,
+          [ { "lineno": 430,
               "filename": "users.js" } ],
         "docs":
           { "summary": "An object that contains information about a site member.",
