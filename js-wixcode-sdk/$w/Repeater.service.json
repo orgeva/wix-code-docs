@@ -3,7 +3,8 @@
   "mixes":
     [ "$w.Element",
       "$w.HiddenCollapsedMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 106,
       "filename": "Repeater.es6" },
@@ -182,11 +183,12 @@
         {  } },
   "properties":
     [ { "name": "data",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
-          { "name": "Array",
+          { "name": "[ 'Array' ]",
             "typeParams":
               [ "Object" ] },
         "locations":
@@ -557,12 +559,13 @@
         "extra":
           {  } },
       { "name": "forItems",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "itemIds",
               "type":
-                { "name": "Array",
+                { "name": "[ 'Array' ]",
                   "typeParams":
                     [ "string" ] },
               "doc": "The IDs of the items on which to run the callback function." },
@@ -774,8 +777,8 @@
         "url": "https://support.wix.com/en/article/wix-code-tutorial-creating-an-expanding-mega-menu" } ],
   "FAQs":
     [ { "title": "What is a repeater?",
-        "markdown": "A [repeater](https://www.wix.com/code/reference/$w.Repeater.html) is an element that displays multiple items using the same layout. You create the layout you like, and then each repeater item (section) uses that same layout to display different content.\n\nRepeaters are great for displaying database content. Each repeater item displays content from a single item (row) in your database collection." },
+        "markdown": "A [repeater]($w.Repeater.html) is an element that displays multiple items using the same layout. You create the layout you like, and then each repeater item (section) uses that same layout to display different content.\n\nRepeaters are great for displaying database content. Each repeater item displays content from a single item (row) in your database collection." },
       { "title": "How do I populate a repeater with new data?",
-        "markdown": "The most common way to populate a repeater is as follows:\n\n1. Set the repeater's data using the [`data`](https://www.wix.com/code/reference/$w.Repeater.html#data) property. This triggers the second step for all items in the data array with a new ID.\n2. Populate the repeater with data from the new items using the [`onItemReady()`](https://www.wix.com/code/reference/$w.Repeater.html#onItemReady) function." },
+        "markdown": "The most common way to populate a repeater is as follows:\n\n1. Set the repeater's data using the [`data`]($w.Repeater.html#data) property. This triggers the second step for all items in the data array with a new ID.\n2. Populate the repeater with data from the new items using the [`onItemReady()`]($w.Repeater.html#onItemReady) function." },
       { "title": "When should I use 'onItemReady' vs. 'forEachItem'?",
-        "markdown": "*   To apply data to repeater items with new IDs, you can use the [`onItemReady()`](https://www.wix.com/code/reference/$w.Repeater.html#onItemReady) event handler.\n*   To update repeater items with existing IDs, you can use the [`forEachItem()`](https://www.wix.com/code/reference/$w.Repeater.html#forEachItem) or [`forItems()`](https://www.wix.com/code/reference/$w.Repeater.html#forItems) functions. [`forEachItem()`](https://www.wix.com/code/reference/$w.Repeater.html#forEachItem) updates each repeated item, and [`forItems()`](https://www.wix.com/code/reference/$w.Repeater.html#forItems) updates only repeated items with the given IDs. " } ] }
+        "markdown": "*   To apply data to repeater items with new IDs, you can use the [`onItemReady()`]($w.Repeater.html#onItemReady) event handler.\n*   To update repeater items with existing IDs, you can use the [`forEachItem()`]($w.Repeater.html#forEachItem) or [`forItems()`]($w.Repeater.html#forItems) functions. [`forEachItem()`]($w.Repeater.html#forEachItem) updates each repeated item, and [`forItems()`]($w.Repeater.html#forItems) updates only repeated items with the given IDs. " } ] }

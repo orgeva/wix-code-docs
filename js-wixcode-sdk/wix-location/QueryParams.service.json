@@ -1,7 +1,8 @@
 { "name": "QueryParams",
   "memberOf": "wix-location",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 233,
       "filename": "location.es6" },
@@ -62,12 +63,13 @@
           { "notes":
               [ "To retrieve the page's current query parameters, use the\n [`query`](wix-location.html#query) property." ] } },
       { "name": "remove",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "toRemove",
               "type":
-                { "name": "Array",
+                { "name": "[ 'Array' ]",
                   "typeParams":
                     [ "string" ] },
               "doc": "List of keys to remove." } ],

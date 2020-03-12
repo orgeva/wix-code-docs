@@ -10,7 +10,7 @@
   "labels":
     [ "changed" ],
   "location":
-    { "lineno": 56,
+    { "lineno": 57,
       "filename": "UploadButton.es6" },
   "docs":
     { "summary": "An upload button enables users to upload files to your site.",
@@ -60,9 +60,9 @@
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 93,
+          [ { "lineno": 94,
               "filename": "UploadButton.es6" },
-            { "lineno": 115,
+            { "lineno": 116,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Sets or gets the label on the upload button.",
@@ -83,21 +83,22 @@
         "extra":
           {  } },
       { "name": "fileType",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type": "string",
         "locations":
-          [ { "lineno": 137,
+          [ { "lineno": 138,
               "filename": "UploadButton.es6" },
-            { "lineno": 168,
+            { "lineno": 169,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Sets or gets the type of file that a user can upload.",
             "description":
               [ "Setting the `fileType` property sets the type of file that",
                 " a user can upload. The value of `fileType` can be set to either",
-                " `\"Image\"`, `\"Document\"`, or `\"Video\"`.",
+                " `\"Image\"`, `\"Document\"`, `\"Video\"`, or `\"Audio\"`.",
                 "",
                 " Getting the `fileType` property returns the current type of",
                 " file that a user can upload.",
@@ -126,7 +127,7 @@
         "set": false,
         "type": "$w.Style",
         "locations":
-          [ { "lineno": 347,
+          [ { "lineno": 355,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Gets an object containing information about the upload button's styles.",
@@ -160,17 +161,18 @@
         "extra":
           {  } },
       { "name": "value",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
-          { "name": "Array",
+          { "name": "[ 'Array' ]",
             "typeParams":
               [ "$w.UploadButton.File" ] },
         "locations":
-          [ { "lineno": 194,
+          [ { "lineno": 195,
               "filename": "UploadButton.es6" },
-            { "lineno": 225,
+            { "lineno": 226,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Returns a list of files that are pending upload.",
@@ -224,7 +226,7 @@
         "ret":
           { "type": "void" },
         "locations":
-          [ { "lineno": 319,
+          [ { "lineno": 327,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Clears the files that are pending upload.",
@@ -253,7 +255,7 @@
                   [ "$w.UploadButton.UploadedFile" ] },
             "doc": "Fulfilled - Resolves when the file upload is completed.\nRejected - Rejects if the file upload fails." },
         "locations":
-          [ { "lineno": 239,
+          [ { "lineno": 240,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "Uploads the files that the user has chosen.",
@@ -309,7 +311,7 @@
   "messages":
     [ { "name": "File",
         "locations":
-          [ { "lineno": 22,
+          [ { "lineno": 23,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "The object used by the `value` property that represents\n files ready for upload.",
@@ -338,7 +340,7 @@
         "labels": [] },
       { "name": "UploadError",
         "locations":
-          [ { "lineno": 45,
+          [ { "lineno": 46,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "The object returned by the `startUpload()` function's\n Promise when an upload fails.",
@@ -371,7 +373,7 @@
         "labels": [] },
       { "name": "UploadedFile",
         "locations":
-          [ { "lineno": 32,
+          [ { "lineno": 33,
               "filename": "UploadButton.es6" } ],
         "docs":
           { "summary": "The object returned by the `startUpload()` function's\n Promise that contains the URL of the successfully uploaded file.",
@@ -419,8 +421,8 @@
         "url": "https://www.wix.com/code/home/forum/wix-tips-and-updates/example-wix-animations" } ],
   "FAQs":
     [ { "title": "What types of files can site visitors upload with an upload button?",
-        "markdown": "You can set your upload button to upload images, documents, or videos using the [`fileType`](https://www.wix.com/code/reference/$w.UploadButton.html#fileType) property. The file types of the images, documents, and videos that can be uploaded are listed [here](https://support.wix.com/en/article/supported-media-file-types-and-file-sizes)." },
+        "markdown": "You can set your upload button to upload images, documents, or videos using the [`fileType`]($w.UploadButton.html#fileType) property. The file types of the images, documents, and videos that can be uploaded are listed [here](https://support.wix.com/en/article/supported-media-file-types-and-file-sizes)." },
       { "title": "How do I use an upload button on my site?",
         "markdown": "The typical file upload scenario is a two-part process. First your visitor chooses the file to upload and then they trigger the actual upload. This usually requires at least two page elements, an upload button element and a regular button. \n\nThe site visitor chooses which file to upload by clicking the upload button and selecting the file in a native file chooser dialog. Then the visitor clicks the regular button to trigger some code that performs the upload. [Learn more](https://support.wix.com/en/article/how-to-use-the-upload-button-with-code)." },
       { "title": "How do I get information about files that are pending an upload?",
-        "markdown": "Use [`value`](https://www.wix.com/code/reference/$w.UploadButton.html#value) property to check the `name` and `size` of [`File`](https://www.wix.com/code/reference/$w.UploadButton.html#File) objects waiting to be uploaded. " } ] }
+        "markdown": "Use [`value`]($w.UploadButton.html#value) property to check the `name` and `size` of [`File`]($w.UploadButton.html#File) objects waiting to be uploaded. " } ] }

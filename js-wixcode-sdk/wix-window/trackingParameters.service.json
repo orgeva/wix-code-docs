@@ -93,7 +93,7 @@
         "members":
           [ { "name": "contents",
               "type":
-                { "name": "Array",
+                { "name": "[ 'Array' ]",
                   "typeParams":
                     [ "wix-window.trackingParameters.AddProductImpressionEventContents" ] },
               "doc": "Product information." },
@@ -103,7 +103,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "AddProductImpressionEventContents",
         "locations":
           [ { "lineno": 740,
@@ -411,8 +412,7 @@
               "doc": "Product ID." } ],
         "extra":
           {  },
-        "labels":
-          [ "changed" ] },
+        "labels": [] },
       { "name": "InitiateCheckoutEvent",
         "locations":
           [ { "lineno": 814,
@@ -455,7 +455,7 @@
         "members":
           [ { "name": "contents",
               "type":
-                { "name": "Array",
+                { "name": "[ 'Array' ]",
                   "typeParams":
                     [ "wix-window.trackingParameters.InitiateCheckoutEventContents" ] },
               "doc": "Product information." },
@@ -465,7 +465,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "InitiateCheckoutEventContents",
         "locations":
           [ { "lineno": 823,
@@ -608,7 +609,7 @@
               "optional": true },
             { "name": "contents",
               "type":
-                { "name": "Array",
+                { "name": "[ 'Array' ]",
                   "typeParams":
                     [ "wix-window.trackingParameters.PurchaseEventContents" ] },
               "doc": "Product information." },
@@ -618,7 +619,8 @@
               "optional": true } ],
         "extra":
           {  },
-        "labels": [] },
+        "labels":
+          [ "changed" ] },
       { "name": "PurchaseEventContents",
         "locations":
           [ { "lineno": 854,

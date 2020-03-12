@@ -1,6 +1,7 @@
 { "name": "wix-location",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 12,
       "filename": "location.es6" },
@@ -125,11 +126,12 @@
         "extra":
           {  } },
       { "name": "path",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": false,
         "type":
-          { "name": "Array",
+          { "name": "[ 'Array' ]",
             "typeParams":
               [ "string" ] },
         "locations":
@@ -573,8 +575,8 @@
         "url": "https://www.wix.com/code/home/example/Quick-Book" } ],
   "FAQs":
     [ { "title": "Do I use wix-location to find the physical location of a site visitor?",
-        "markdown": "No. Use [`wix-window.getCurrentGeolocation`](https://www.wix.com/code/reference/wix-window.html#getCurrentGeolocation) instead. The wix-location API contains functionality for getting information about the URL of the current page and for navigating to other pages." },
+        "markdown": "No. Use [`wix-window.getCurrentGeolocation`](wix-window.html#getCurrentGeolocation) instead. The wix-location API contains functionality for getting information about the URL of the current page and for navigating to other pages." },
       { "title": "How can I open a link in a new tab when using the 'to()' function?",
-        "markdown": "Currently, you cannot open a link in a new tab when using the [`to()`](https://www.wix.com/code/reference/wix-location.html#to) function. In some cases, when setting where a [button](https://www.wix.com/code/reference/$w.Button.html) sends a site visitor, a workaround is to set the button's [`link`](https://www.wix.com/code/reference/$w.Button.html#link) and [`target`](https://www.wix.com/code/reference/$w.Button.html#target). " },
+        "markdown": "Currently, you cannot open a link in a new tab when using the [`to()`](wix-location.html#to) function. In some cases, when setting where a [button]($w.Button.html) sends a site visitor, a workaround is to set the button's [`link`]($w.Button.html#link) and [`target`]($w.Button.html#target). " },
       { "title": "How do I remove the query parameters that are kept when I navigate between pages in my site?",
-        "markdown": "To remove the query parameters, direct the browser using the [`to()`](https://www.wix.com/code/reference/wix-location.html#to) function to the full URL of a page instead of a relative URL. For example, instead of using `/next-page`, use `https://mysite.com/next-page`." } ] }
+        "markdown": "To remove the query parameters, direct the browser using the [`to()`](wix-location.html#to) function to the full URL of a page instead of a relative URL. For example, instead of using `/next-page`, use `https://mysite.com/next-page`." } ] }

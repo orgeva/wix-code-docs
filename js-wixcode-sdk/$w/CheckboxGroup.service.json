@@ -8,7 +8,8 @@
       "$w.ClickableMixin",
       "$w.StyleMixin",
       "$w.RequiredMixin" ],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 26,
       "filename": "CheckboxGroup.es6" },
@@ -24,11 +25,12 @@
         {  } },
   "properties":
     [ { "name": "options",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
-          { "name": "Array",
+          { "name": "[ 'Array' ]",
             "typeParams":
               [ "$w.CheckboxGroup.Option" ] },
         "defaultValue": "An empty array",
@@ -84,11 +86,12 @@
         "extra":
           {  } },
       { "name": "selectedIndices",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
-          { "name": "Array",
+          { "name": "[ 'Array' ]",
             "typeParams":
               [ "number" ] },
         "locations":
@@ -164,11 +167,12 @@
         "extra":
           {  } },
       { "name": "value",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "get": true,
         "set": true,
         "type":
-          { "name": "Array",
+          { "name": "[ 'Array' ]",
             "typeParams":
               [ "string" ] },
         "locations":

@@ -218,26 +218,14 @@
               { "name": "Promise",
                 "typeParams":
                   [ "void" ] },
-            "doc": "Fulfilled - When the copy is complete or the site visitor closes the modal popup." },
+            "doc": "Fulfilled - When the copy flow is complete.\nRejected - The error that caused the rejection." },
         "locations":
           [ { "lineno": 419,
               "filename": "window.es6" } ],
         "docs":
-          { "summary": "Copies text to the site visitor's clipboard.",
+          { "summary": "Copy text to clipboard. If the current browser does not support programmatic copy action, a modal with a copy button will be opened.",
             "description":
-              [ "The `copyToClipboard()` function copies the specified text to the site visitor's clipboard. ",
-                "",	
-                " If the site visitor's browser does not support copying text to the clipboard",	
-                " programmatically, a modal popup that allows copying will be displayed.",	
-                " For example, when calling `copyToClipboard` from a Firefox or Edge browser,",	
-                " the site visitor will see something similar to the popup shown below.",	
-                "",	
-                " ![Copy To Clipboard Popup](images/copyToClipboardModal.png \"Copy To Clipboard Popup\")",	
-                "",	
-                " The Promise returned by `copyToClipboard()` resolves when the",	
-                " specified text is copied to clipboard or the modal popup is closed. ",	
-                " The Promise is rejected if a `null` value is passed as the `toCopy` parameter",	
-                " or if the visitor's browser blocks the modal popup from opening." ],
+              [ "The `copyToClipboard()` function returns a Promise that resolves when the text is copied to clipboard." ],
             "links": [],
             "examples":
               [ { "title": "Copy text to clipboard",
@@ -246,13 +234,10 @@
                       "",
                       "// ...",
                       "",
-                      "wixWindow.copyToClipboard(\"Text to copy!\")",
-                      "  .then( () => {",
-                      "    // handle case where text was copied",
-                      "  } )",
-                      "  .catch( (err) => {",	
-                      "    // handle case where an error occurred",	
-                      "  } );" ],
+                      "wixWindow.copyToClipboard('Text to copy')",
+                      "  .then(() => {",
+                      "      // rest of the user code",
+                      "  });" ],
                   "extra":
                     {  } } ],
             "extra":
@@ -806,8 +791,7 @@
         "extra":
           {  } },
       { "name": "trackEvent",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "eventName",
@@ -1037,10 +1021,10 @@
         "url": "https://www.youtube.com/watch?v=MTBVyk0YGv0" } ],
   "FAQs":
     [ { "title": "How do I make my site act differently depending on what device it is being viewed on?",
-        "markdown": "You can check the type of device your site is being viewed on using the [`formFactor`](https://www.wix.com/code/reference/wix-window.html#formFactor) property. Note, that when you preview your site in the mobile editor the [`formFactor`](https://www.wix.com/code/reference/wix-window.html#formFactor) property still returns `\"Desktop\"`." },
+        "markdown": "You can check the type of device your site is being viewed on using the [`formFactor`](wix-window.html#formFactor) property. Note, that when you preview your site in the mobile editor the [`formFactor`](wix-window.html#formFactor) property still returns `\"Desktop\"`." },
       { "title": "How do I close a lightbox?",
-        "markdown": "Although you can open a lightbox using the top-level wix-window API with the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function, there is no top-level wix-window function for closing lightboxes. That's because once the lightbox is open, control is moved away from the page that opened the lightbox to the lightbox itself. Therefore, to close the lightbox, you have to call the [`wix-window.lightbox.close()`](https://www.wix.com/code/reference/wix-window.lightbox.html#close) function from within the lightbox's code." },
+        "markdown": "Although you can open a lightbox using the top-level wix-window API with the [`openLightbox()`](wix-window.html#openLightbox) function, there is no top-level wix-window function for closing lightboxes. That's because once the lightbox is open, control is moved away from the page that opened the lightbox to the lightbox itself. Therefore, to close the lightbox, you have to call the [`wix-window.lightbox.close()`](wix-window.lightbox.html#close) function from within the lightbox's code." },
       { "title": "How do I pass data between a page and a lightbox?",
-        "markdown": "When you open a lightbox using the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function, you can pass an object containing data to be used in the lightbox. In the lightbox's code, you call the [`getContext()`](https://www.wix.com/code/reference/wix-window.lightbox.html#getContext) function to retrieve the data sent by the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function. \n\nWhen you close the lightbox using the [`close()`](https://www.wix.com/code/reference/wix-window.lightbox.html#close) function, you can pass an object containing data to be used by the page that opened the lightbox. This data is retrieved from the resolution of the Promise returned by the [`openLightbox()`](https://www.wix.com/code/reference/wix-window.html#openLightbox) function.\n" },
+        "markdown": "When you open a lightbox using the [`openLightbox()`](wix-window.html#openLightbox) function, you can pass an object containing data to be used in the lightbox. In the lightbox's code, you call the [`getContext()`](wix-window.lightbox.html#getContext) function to retrieve the data sent by the [`openLightbox()`](wix-window.html#openLightbox) function. \n\nWhen you close the lightbox using the [`close()`](wix-window.lightbox.html#close) function, you can pass an object containing data to be used by the page that opened the lightbox. This data is retrieved from the resolution of the Promise returned by the [`openLightbox()`](wix-window.html#openLightbox) function.\n" },
       { "title": "How does my site interact with a site that embeds it?",
-        "markdown": "You can send messages from your site to a site that embeds it using the [`postMessage()`](https://www.wix.com/code/reference/wix-window.html#postMessage) function. \n\nIf the embedding site is a Wix site, use the [`HTMLComponent.onMessage()`](https://www.wix.com/code/reference/$w.HtmlComponent.html#onMessage) function in the embedding site to receive messages sent from the embedded site.\n\nIf the embedding site is not a Wix site, use the Javascript [window.onmessage](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage) event handler to read the data property of the received [MessageEvent](https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent) to receive the message on the parent page." } ] }
+        "markdown": "You can send messages from your site to a site that embeds it using the [`postMessage()`](wix-window.html#postMessage) function. \n\nIf the embedding site is a Wix site, use the [`HTMLComponent.onMessage()`]($w.HtmlComponent.html#onMessage) function in the embedding site to receive messages sent from the embedded site.\n\nIf the embedding site is not a Wix site, use the Javascript [window.onmessage](https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onmessage) event handler to read the data property of the received [MessageEvent](https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent) to receive the message on the parent page." } ] }
