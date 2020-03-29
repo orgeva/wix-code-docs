@@ -1,6 +1,7 @@
 { "name": "wix-stores-backend",
   "mixes": [],
-  "labels": [],
+  "labels":
+    [ "changed" ],
   "location":
     { "lineno": 1,
       "filename": "products.js" },
@@ -1142,7 +1143,8 @@
         "extra":
           {  } },
       { "name": "getProductVariants",
-        "labels": [],
+        "labels":
+          [ "changed" ],
         "nameParams": [],
         "params":
           [ { "name": "productId",
@@ -1150,7 +1152,7 @@
               "doc": "The ID of the product whose variants are being retrieved." },
             { "name": "options",
               "type": "wix-stores-backend.ProductVariantOptions",
-              "doc": "Option to use when checking the product's variants." } ],
+              "doc": "Option to use when checking the product's variants. If not specified, all variants are checked." } ],
         "ret":
           { "type":
               { "name": "Promise",
