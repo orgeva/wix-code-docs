@@ -1,7 +1,6 @@
 { "name": "wix-stores",
   "mixes": [],
-  "labels":
-    [ "changed" ],
+  "labels": [],
   "location":
     { "lineno": 1,
       "filename": "stores.js" },
@@ -65,8 +64,7 @@
         "extra":
           {  } },
       { "name": "getProductVariants",
-        "labels":
-          [ "changed" ],
+        "labels": [],
         "nameParams": [],
         "params":
           [ { "name": "productId",
